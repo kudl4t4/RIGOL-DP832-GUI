@@ -1,0 +1,2 @@
+# RIGOL-DP832-GUI
+Python based RIGOL DP832 GUI
