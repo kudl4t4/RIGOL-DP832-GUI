@@ -6,8 +6,8 @@ Simple Python-based application to give a visual remote control interface for th
 
 ### Main Features ###
   * Supports direct control of all three channels. <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot1.png" align="right" width="208">
-  * Supports graphing view with data logging to csv. <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot2.png" align="right" width="208">
-  * Supports both NI VISA and Python VISA (through PyVISA)
+  * Supports graphing view with data logging to csv. 
+  * Supports both NI VISA and Python VISA (through PyVISA) <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot2.png" align="right" width="208">
 
 ### Build Instructions ###
 #### Basic Build Setup
