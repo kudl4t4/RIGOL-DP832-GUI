@@ -18,6 +18,8 @@ import numpy
 
 from datetime import (datetime)
 
+import argparse
+
 class About_License(QDialog):
     def __init__(self, parent=None):
         super(About_License, self).__init__(parent)
@@ -779,7 +781,7 @@ class Plot(QMainWindow):
 
 class DP832(QMainWindow):
     
-    def __init__(self):
+    def __init__(self, pyvisapy):
         super(DP832, self).__init__()
 
         aboutAction = QAction('&License', self)
@@ -792,6 +794,10 @@ class DP832(QMainWindow):
         self.dp832_widget = QWidget()
         self.setCentralWidget(self.dp832_widget)
         self.initUI()
+
+        print(f"{pyvisapy}")
+
+        self.pyvisapy = pyvisapy 
 
     def menu_about(self):
         self.about_license = About_License(self)
@@ -1770,12 +1776,16 @@ class DP832(QMainWindow):
     def main_connect(self):
         #visa.log_to_screen()
         try: 
-            self.main_rigol_rm = visa.ResourceManager()
+            if self.pyvisapy is True:
+                self.main_rigol_rm = visa.ResourceManager('@py')
+            else:
+                self.main_rigol_rm = visa.ResourceManager()
+
         except Exception as ex:
             self.showWarning("from ResourceManager", str(ex))
             print(ex)
-            return
-        if self.main_rigol_rm.last_status == 0:
+            return        
+        if self.pyvisapy is True or self.main_rigol_rm.last_status == 0: 
             self.main_rigol_hosting = "TCPIP::" + self.main_le_ipaddr.text() + "::inst0::INSTR"
             try:
                 self.main_rigol_inst = self.main_rigol_rm.open_resource(self.main_rigol_hosting)
@@ -1839,6 +1849,9 @@ class DP832(QMainWindow):
 if __name__ == '__main__':
     
     app = QApplication(sys.argv)
-    ex = DP832()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--pyvisapy", help="Use the python implementation of PyVISA rather than the NI implementation", action='store_true')
+    args, leftovers = parser.parse_known_args()
+    ex = DP832(args.pyvisapy)
     ex.show()
     sys.exit(app.exec_())  
