@@ -5,8 +5,8 @@
 Simple Python-based application to give a visual remote control interface for the [Rigol DP832](https://www.rigolna.com/products/dc-power-loads/dp800/).
 
 ### Main Features ###
-  * Supports direct control of all three channels. <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/screenshot1.png" align="right" width="208">
-  * Supports graphing view with data logging to csv. <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/screenshot2.png" align="right" width="208">
+  * Supports direct control of all three channels. <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot1.png" align="right" width="208">
+  * Supports graphing view with data logging to csv. <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot2.png" align="right" width="208">
   * Supports both NI VISA and Python VISA (through PyVISA)
 
 ### Build Instructions ###
