@@ -9,8 +9,8 @@ Simple Python-based application to give a visual remote control interface for th
   * Supports graphing view with data logging to csv. 
   * Supports both NI VISA and Python VISA (through PyVISA) 
 ### Screenshots ###
-<img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot2.png" width="640">
 <img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot1.png" width="640">
+<img src="https://raw.githubusercontent.com/dretay/RIGOL-DP832-GUI/master/img/screenshot2.png" width="640">
 ### Build Instructions ###
 #### Basic Build Setup
 1. [install poetry](https://python-poetry.org/docs/) 
