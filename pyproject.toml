@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rigol-dp832-gui"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyvisa = "^1.10.1"
+pyqt5 = "^5.15.0"
+matplotlib = "^3.2.2"
+pyvisa-py = "^0.4.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
